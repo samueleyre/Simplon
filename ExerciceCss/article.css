@@ -1,0 +1,25 @@
+*{
+  box-sizing: border-box;
+  margin :0;
+
+}
+
+body {
+  width : 100%;
+}
+
+img {
+  float : right;
+}
+
+footer {
+  width : 100%;
+  background-color: lightgrey;
+  bottom: 0;
+  position: absolute;
+}
+
+header{
+  width:100%;
+  background-color: lightgrey;
+}
