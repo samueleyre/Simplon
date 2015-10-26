@@ -1,0 +1,232 @@
+body {
+  margin :0px;
+  width:100%;
+  background-color: #EDEFED;
+}
+/*#container, header,#logobox,#titlebox {
+  box-sizing: border-box;
+  opacity:0.8;
+}*/
+#titlebox {
+  box-sizing: border-box;
+}
+#hotebox, #Message, #aidebox, #connexbox {
+  float : right;
+  padding: 15px;
+  padding-bottom: 11px;
+
+}
+#container {
+  width:100%;
+  height : 750px;
+  background-image: url('nature-concert.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+header{
+  top : 0px;
+  height : 50px;
+  background : transparent;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#logobox {
+  float : left;
+  padding: 14px;
+  padding-bottom: 1px;;
+  opacity: 0.8;
+}
+#titlebox{
+  height: 276px;
+  width : 100%;
+  opacity: 0.9;
+}
+#loginbox {
+  float:right;
+}
+.login {
+  text-decoration: none;
+  color: white;
+}
+#title {
+  vertical-align: middle;
+  width : 100%;
+  height : 107px;
+  margin-top: 160px;
+  color: white;
+}
+
+h2 {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-transform: uppercase;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  opacity: 0.9;
+}
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.1;
+  color:white;
+  text-align: center;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  padding-top: 0px;
+  margin-top: 0px;
+  opacity: 1;
+}
+#Modeemploibox {
+  width : 100%;
+  height : 50px;
+  text-align: center;
+  opacity: 0.95;
+}
+
+#Modeemploi, #revenuslink{
+  background: rgba(255, 255, 255, 0.5) none repeat scroll 0% 0%;
+  border-style: none;
+  border-color: #565A5C #565A5C #383B3C;
+  color: #FFF;
+  padding: 9px 27px;
+  font-size: 16px;
+  margin-bottom: 0px;
+  border-radius: 2px;
+  border: 1px solid;
+  font-weight: bold;
+  line-height: 1.43;
+  text-decoration: none;
+}
+#searchbox {
+  background-color: rgba(0, 0, 0, 0.6);
+  bottom: 76px;
+  left: 0px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  right: 0px;
+  position: relative;
+  text-align: center;
+}
+#searchbar{
+  height: 44px;
+  position: relative;
+  margin: auto;
+  text-align: center;
+  display: inline-block;
+}
+/*#destination #arrivee #depart #nbre #voyageurs{
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}*/
+
+input {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0px -2px 0px 0px;
+  border-radius: 0px;
+}
+
+.destination{
+  width : 100px;
+  box-sizing: border-box;
+  overflow: auto;
+  float:left;
+}
+
+.arriveedepart{
+  width : 80px;
+  box-sizing: border-box;
+  overflow: auto;
+  float:left;
+}
+.nbrevoyageurs {
+  float:left;
+}
+button {
+  height : 43px;
+  display:inline-block;
+  box-sizing: border-box;
+  float:left;
+  margin:-0.4px 0px 0px 2px;
+  background-color: red;
+  color: white;
+}
+#info {
+  width: 100%;
+  height: 453px;
+  box-sizing: border-box;
+  top : -76px;
+  position: relative;
+  text-align: center;
+  margin-top: 50px;
+
+}
+#acceuillir {
+  /*width : 90%;*/
+  margin : auto;
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: white;
+
+}
+#accright {
+  background-image: url('Acceuil.png');
+  background-size:100%;
+  width: 655px;
+  height: 344px;
+  display: inline-block;
+  vertical-align: top;
+}
+#accleft{
+  width: 340px;
+  height: 344px;
+  display: inline-block;
+  vertical-align: top;
+}
+h4 {
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.1;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #565A5C;
+  text-align: center;
+  margin-bottom: 25px;
+}
+h5 {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.1;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #565A5C;
+    text-align: center;
+    margin-bottom: 25px;
+    line-height: 1.43;
+}
+
+#insideAccLeft {
+  padding-left: 40px;
+  padding-right: 10px;
+  vertical-align: center;
+}
+
+#revenuslink {
+  border-color: #007A87 #007A87 #004F58;
+  background-color: #007A87;
+  color: #FFF;
+  padding: 9px 27px;
+  font-size: 16px;
+  float: center;
+  text-decoration: none;
+  margin-bottom: 0px;
+border-radius: 2px;
+border: 1px solid;
+text-align: center;
+vertical-align: middle;
+font-weight: bold;
+line-height: 1.43;
+-moz-user-select: none;
+box-sizing: border-box;
+}
