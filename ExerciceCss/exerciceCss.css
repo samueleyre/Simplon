@@ -32,3 +32,7 @@ footer {
   bottom: 0;
   position: absolute;
 }
+
+div:first-child {
+  background-color: grey;
+}
