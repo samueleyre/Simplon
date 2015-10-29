@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>calc</title>
+  <link rel="stylesheet" href="calculatricegraphique.css">
+</head>
+<body>
+  <div class="container">
+
+      <button onclick="one()" class="box"><h1>1</h1></button>
+      <button onclick="two()" class="box"><h1>2</h1></button>
+      <button onclick="three()" class="box"><h1>3</h1></button>
+      <button onclick="plus()" class="box"><h1>+</h1></button>
+      <button onclick="four()" class="box"><h1>4</h1></button>
+      <button onclick="five()" class="box"><h1>5</h1></button>
+      <button onclick="six()" class="box"><h1>6</h1></button>
+      <button onclick="minus()" class="box"><h1>-</h1></button>
+      <button onclick="seven()" class="box"><h1>7</h1></button>
+      <button onclick="eight()" class="box"><h1>8</h1></button>
+      <button onclick="nine()" class="box"><h1>9</h1></button>
+      <button onclick="times()" class="box"><h1>*</h1></button>
+      <button onclick="zero()" class="box"><h1>0</h1></button>
+      <button onclick="calculate()" class="box longbox"><h1>=</h1></button>
+      <button onclick="divide()" class="box"><h1>/</h1></button>
+
+      <textarea id="output" name="name" rows="8" cols="40"></textarea>
+  </div>
+<script>
+    var nombres = ["", "","",""];
+    var Pchiffre = true;
+    var Pchiffre2 = true;
+    var multiply="";
+    var nombre1 = "";
+    var nombre2 = "";
+    var result = "";
+    // var operation = false;
+    function pussh(i){
+      console.log(Pchiffre);
+      if (multiply === "" && result === "") {
+        console.log("multiply empty")
+        if (Pchiffre === true) {
+          nombres[1] = "";
+          nombres[0] = i;
+          Pchiffre = false;
+          console.log(nombres[0] + " " + nombres[1]);
+          nombre1 = nombres[0] + "" + nombres[1];
+          document.getElementById('output').innerHTML = nombre1;
+          return;
+        }
+        else {
+          nombres[1] = i;
+          Pchiffre = true;
+          console.log(nombres[0] + " " + nombres[1]);
+          nombre1 = nombres[0] + "" + nombres[1];
+          document.getElementById('output').innerHTML = nombre1;
+          return;
+        }
+      }
+      else {
+        if (Pchiffre2 === true) {
+          nombres[3] = "";
+          nombres[2] = i;
+          Pchiffre2 = false;
+          console.log(nombres[2] + " " + nombres[3]);
+          nombre2 = nombres[2] + "" + nombres[3];
+          document.getElementById('output').innerHTML = nombre2;
+          // operation = false;
+          return;
+        }
+        else {
+          nombres[3] = i;
+          Pchiffre2 = true;
+          console.log(nombres[2] + " " + nombres[3]);
+          nombre2 = nombres[2] + "" + nombres[3];
+          document.getElementById('output').innerHTML = nombre2;
+          // operation = false;
+          return;
+        }
+      }
+
+    }
+    function one() {
+      pussh(1);
+    }
+    function two() {
+      pussh(2);
+    }function three() {
+      pussh(3);
+    }function four() {
+      pussh(4);
+    }function five() {
+      pussh(5);
+    }function six() {
+      pussh(6);
+    }function seven() {
+      pussh(7);
+    }function eight() {
+      pussh(8);
+    }function nine() {
+      pussh(9);
+    }function zero() {
+      pussh(0);
+    }
+
+
+
+function operation(i) {
+  operations = ["plus","minus","times","divide"];
+  operationsigns = ["+","-","*","/"];
+  multiply = operations[i];
+  document.getElementById('output').innerHTML = operationsigns[i];
+  // operation = false;
+}
+  function plus() {
+    operation(0);
+  }function minus() {
+    operation(1);
+  }function times() {
+    operation(2);
+  }function divide() {
+    operation(3);
+  }
+function calculate() {
+  console.log("here");
+  switch (multiply) {
+    case "plus":
+      result = (Number(nombre1) + Number(nombre2));
+      console.log("plus");
+      break;
+      case "minus":
+        result = (nombre1 - nombre2);
+        break;
+        case "times":
+          result = (nombre1 * nombre2);
+          break;
+          case "divide":
+            result = (nombre1 / nombre2);
+            break;
+    default:
+      result = "Incorrect Input! I'm not a toy....";
+      break;
+  }
+  document.getElementById('output').innerHTML = result;
+  nombre1 = result;
+  Pchiffre2 = true;
+
+}
+
+
+
+
+
+
+
+      // switch (Pnombres) {
+      //   case true:
+      //   nombres[0] = i;
+      //   Pnombres = false;
+      //   console.log(nombres[1] + "" + nombres[1]);
+      //     break;
+      //     case false:
+      //     nombres[1] = i;
+      //     Pnombres = true;
+      //     console.log(nombres[1] + "" + nombres[1]);
+      //         break;
+      //   default:
+      //   console.log("oijoij");
+      //     break;
+      // }
+</script>
+</body>
+</html>

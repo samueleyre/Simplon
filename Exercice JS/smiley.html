@@ -1,0 +1,49 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <style>
+    #result-box{
+      background-color:#DDD;
+      width:340px;
+      height:120px;
+    }
+  </style>
+</head>
+<body>
+  <textArea id="Entree" cols="50" rows="4" />:') j'adore les  :) c'est trop :D ! </textArea>
+  <button onclick="checksmiley()" >Modérer</button>
+  <div>Résultat</div>
+  <div id="result-box"><p id="output"></p></div>
+
+<script type="text/javascript">
+function checksmiley() {
+  var interdits = [":)",":(",":|",":')", ":D", ":-)",":-(",":-|",":')", ":-D" ];
+  var Entree = document.getElementById("Entree").value;
+  console.log(Entree);
+  var splittedEntree = Entree.split(" ");
+  console.log(splittedEntree);
+  for (var i = 0; i < splittedEntree.length; i++) {
+    console.log(splittedEntree[i]);
+    for (var j = 0; j < interdits.length; j++) {
+      console.log(interdits[j]);
+      if (interdits[j] === splittedEntree[i]) {
+            splittedEntree[i] = '--';
+            console.log("found");
+      }
+    }
+  }
+  console.log(splittedEntree);
+  sortie = "";
+  for (var i = 0; i < splittedEntree.length; i++) {
+    var sortie =  sortie + " " + splittedEntree[i];
+  }
+  document.getElementById("output").innerHTML = sortie;
+}
+
+
+
+</script>
+
+</body>
+</html>

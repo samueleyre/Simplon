@@ -1,0 +1,19 @@
+body{
+  width:100%;
+  margin:0;
+}
+.container {
+  width: 32%;
+  height: 50%;
+    box-sizing: border-box;
+}
+.box {
+  width: 82px;
+  height: 80px;
+  display:inline-block;
+  vertical-align: top;
+}
+.longbox {
+  width : 170px;
+
+}
