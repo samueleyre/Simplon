@@ -12,22 +12,35 @@ body {
 }
 #hotebox, #Message, #aidebox, #connexbox {
   float : right;
-  padding: 15px;
+  float: right;
+  padding: 10px;
   padding-bottom: 11px;
+  margin: 15px;
 
+}
+#hotebox{
+  border: solid 1px white;
+  border-radius: 3px;
 }
 #container {
   width:100%;
   height : 750px;
-  background-image: url('nature-concert.jpg');
+  /*background-image: url('nature-concert.jpg');*/
   background-size: 100%;
   background-repeat: no-repeat;
+  position: relative;
+}
+video{
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+
 }
 header{
   top : 0px;
   height : 50px;
-  background : transparent;
-  background-color: rgba(0, 0, 0, 0.1);
+  /*background : transparent;
+  background-color: rgba(0, 0, 0, 0.1);*/
 }
 
 #logobox {
@@ -90,21 +103,23 @@ h3 {
   border-style: none;
   border-color: #565A5C #565A5C #383B3C;
   color: #FFF;
-  padding: 9px 27px;
+  padding: 14px 32px;
   font-size: 16px;
   margin-bottom: 0px;
-  border-radius: 2px;
-  border: 1px solid;
+  /*border-radius: 2px;
+  border: 1px solid ;*/
   font-weight: bold;
   line-height: 1.43;
   text-decoration: none;
 }
+
+#Modeemploi:hover{
+  background: rgba(255, 255, 255, 0.7) none repeat scroll 0% 0%;}
 #searchbox {
   background-color: rgba(0, 0, 0, 0.6);
-  bottom: 76px;
+  bottom: -15%;
   left: 0px;
-  padding-bottom: 30px;
-  padding-top: 30px;
+  padding: 3% 0%;
   right: 0px;
   position: relative;
   text-align: center;
@@ -130,10 +145,11 @@ input {
 }
 
 .destination{
-  width : 100px;
+  width : 264px;
   box-sizing: border-box;
   overflow: auto;
   float:left;
+  color: black;
 }
 
 .arriveedepart{
@@ -144,15 +160,18 @@ input {
 }
 .nbrevoyageurs {
   float:left;
+  padding-bottom: 25px;
 }
 button {
-  height : 43px;
-  display:inline-block;
+  height: 54px;
+  display: inline-block;
   box-sizing: border-box;
-  float:left;
-  margin:-0.4px 0px 0px 2px;
+  float: left;
+  margin: -0.4px 0px 0px 1px;
   background-color: red;
   color: white;
+  padding-bottom: 3px;
+  width: 105px;
 }
 #info {
   width: 100%;
@@ -161,7 +180,7 @@ button {
   top : -76px;
   position: relative;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 19%;
 
 }
 #acceuillir {
