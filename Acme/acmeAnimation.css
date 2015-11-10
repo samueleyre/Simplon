@@ -1,0 +1,337 @@
+body{
+  width :100%;
+  background-color: #292929;
+  margin: 0;
+}
+.bar0 {
+  position: absolute;
+  top: 50.7%;
+  margin: 0 13%;
+  left: auto;
+  right:auto;
+  height: 6.3vw;
+  width: 74%;
+  background: #ffc815;
+  z-index: 2;
+  transition: 2s ease;
+  animation : dropHeader, levelHeader 1s 2s,undropHeader 1s 4s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1.5s;
+  /*animation-name: levelHeader;*/
+  animation-fill-mode:forwards;
+  /*animation-delay: 2s;*/
+
+}
+@keyframes dropHeader {
+    0% {
+        width:0%;
+    }
+    100% {
+        width :74%;
+    }
+}
+@keyframes undropHeader {
+    0% {
+
+
+    }
+    100% {
+        width: 0%;
+    }
+}
+@keyframes levelHeader {
+    0% {
+        /*transform: translateX(0);*/
+    }
+    100% {
+        transform: translateY(-240%);
+    }
+}
+
+@keyframes upBackgroundloader {
+    0% {
+        transform: translateY(40%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes logoDown {
+    0% {
+        transform: translateY(-50%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+
+}
+.backgroundimg{
+  position: absolute;
+  width:100%;
+  overflow: hidden;
+  animation-name: upBackgroundloader;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1.5s;
+  z-index: -2;
+}
+.backgroundimg img{
+  width: 137%;
+  height: 100%;
+  margin: -12.7% 0% -14% -19%;
+}
+.backgroundimgFilter  img{
+  width: 119%;
+  height: 100%;
+  margin: -12.7% 0% 0% -19%;
+}
+
+
+
+.backgroundimgFilter{
+  position: absolute;
+  width:100%;
+  animation-name: upBackgroundloader;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1.5s;
+  z-index: -1;
+}
+.bar{
+  position: absolute;
+  background: transparent none repeat scroll 0% 0%;
+  color: #292929;
+  margin: 0px;
+  padding: 4.1vw 1vw 2vw;
+  border-width: 26vw 13vw 21vw 13vw;
+  border-style: solid;
+  border-color: #292929;
+  z-index: 0;
+  background: transparent;
+  transition: 2s ease;
+  animation-name: openWindow;
+  animation-iteration-count: 1s;
+  animation-timing-function: ease-in;
+  animation-duration: 3s;
+  animation-fill-mode:forwards;
+  -webkit-animation-delay: 2s; /* Chrome, Safari, Opera */
+   animation-delay: 2s;
+   width:100%;
+   box-sizing: border-box;
+}
+@keyframes openWindow {
+  0% {
+  }
+  50% {
+      border-width: 0vw;
+      padding : 46vw 49vw;
+      visibility: hidden;
+      z-index: 0;
+  }
+  100% {
+      border-width: 0vw;
+      padding : 46vw 49vw;
+      visibility: hidden;
+      z-index: -98;
+  }
+}
+.logoAcmeBox{
+  margin: 0%;
+  text-align: center;
+  padding: 16% 0 1.7% 0;
+  z-index: 3;
+  /*background-color: #292929;*/
+  position: absolute;
+  display: block;
+  width: 100%;
+  animation : logoPaddingDecrease;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1.5s;
+  animation-delay: 2s;
+  animation-fill-mode:forwards;
+}
+
+@keyframes logoPaddingDecrease {
+  0% {
+  }
+  100% {
+      padding: 5% 0 1.7% 0;
+  }
+}
+
+
+.logoAcme{
+  width : 10%;
+  transition: opacity 2s ease;
+  animation : logoDown;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1.5s;
+}
+/*.container{
+  z-index: 1;
+}*/
+.navbar {
+  position: absolute;
+  top: 20.75%;
+  margin: 0 13%;
+  left: auto;
+  right:auto;
+  height: 6.3vw;
+  width: 74%;
+  background: #292929;
+  z-index: 1;
+  text-align: center;
+  display: inline-block;
+  /*transition: ease 0.5s;*/
+  animation : navbarAppear;
+  animation-iteration-count: 1;
+  animation-timing-function: step-end;
+  animation-duration: 4s;
+}
+@keyframes navbarAppear {
+  0% {
+      z-index : -3;
+  }
+  100% {
+      z-index: 1;
+  }
+}
+.navbarOptions{
+  letter-spacing: 0em;
+  display: inline-block;
+  height: 6.3vw;
+  vertical-align: top;
+  padding: 0vw 1vw;
+  text-decoration: none;
+}
+.homeLinks{
+  font-family: "BebasNeue",sans-serif;
+  color: #E0E0E0;
+  line-height: 3.2em;
+  transform: scale(1,1.5);
+  -webkit-transform:scale(1,1.5);
+  /* Safari and Chrome */
+  -moz-transform:scale(1,1.5);
+  /* Firefox */
+  font-size: 0.71em;
+  margin: 1vw 0vw 0vw;
+  animation : linksAppear;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-delay: 4.8s;
+  animation-duration: 0.5s;
+}
+@keyframes linksAppear {
+  0% {
+      transform: translateX(+50%);
+  }
+  100% {
+      transform: translateX(0%);
+      transform: scale(1,1.5);
+      -webkit-transform:scale(1,1.5); /* Safari and Chrome */
+      -moz-transform:scale(1,1.5); /* Firefox */
+  }
+}
+.homePage{
+  font-family: "BebasNeue",sans-serif;
+  line-height: 3.2em;
+  transform: scale(1,1.5);
+  -webkit-transform:scale(1,1.5); /* Safari and Chrome */
+  -moz-transform:scale(1,1.5); /* Firefox */
+  font-size: 0.71em;
+  margin: 1.6vw 0vw 0vw 0vw;
+  color:#292929;
+}
+#homePage{
+  background-color: #FFC815;
+  margin-left: 3vw;
+}
+.animNavbar{
+  background-color: #FFC815;
+  bottom: 0%;
+  height: 10%;
+  width: 0%;
+  left: -21%;
+  position: relative;
+  transition: all 0.35s ease;
+  top: 90%;
+}
+
+.navbar a:hover > .animNavbar{
+  width: 139%;
+  /*width: 100%;*/
+
+}
+.navbarOptions2{
+  letter-spacing: 0em;
+  display: inline-block;
+  height: 6.3vw;
+  vertical-align: top;
+  padding: 0vw 1.313vw;
+  text-decoration: none;
+  background-color: #575757;
+}
+.homeLinks2{
+  font-family: "BebasNeue",sans-serif;
+  color: #E0E0E0;
+  line-height: 5em;
+  transform: scale(1,1.5);
+  -webkit-transform:scale(1,1.5); /* Safari and Chrome */
+  -moz-transform:scale(1,1.5); /* Firefox */
+  font-size: 0.54em;
+  margin: 1.6vw 0vw 0vw 0vw;
+  animation : linksAppear;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-delay: 4s;
+  animation-duration: 0.5s;
+}
+.scope{
+  display: inline-block;
+}
+svg{
+  padding: 2vw 1.5vw 2.3vw 1vw;
+  width: 2vw;
+  height: 2vw;
+}
+#claque1 {
+  width :30%;
+}
+path{
+  -webkit-transform:scale(2,2); /* Safari and Chrome */
+  -moz-transform:scale(2,2); /* Firefox */
+}
+.bigTitle{
+  font-size: 14vw;
+  font-family: "MFred",sans-serif;
+  color: #FFF;
+  position: relative;
+  top: 8vw;
+  transform: scale(0.6, 1);
+  z-index: 0;
+  line-height: 12vw;
+  font-weight: normal;
+}
+.bigTitleBox{
+  text-align: center;
+  width: 102%;
+  padding: 0%;
+  position: absolute;
+  z-index: 0;
+  animation: 4s step-end 0s normal none 1 running navbarAppear;
+  margin: auto;
+  left: 0px;
+  right: 0px;
+}
+@keyframes navbarAppear {
+  0% {
+      z-index : -3;
+  }
+  100% {
+      z-index: 1;
+  }
+}

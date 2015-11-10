@@ -1,0 +1,122 @@
+body{
+  width :100%;
+  background-color: #292929;
+  margin: 0;
+}
+.logoAcmeBox{
+  margin: 0%;
+  text-align: center;
+  padding: 5% 0 1.7% 0;
+  z-index: 3;
+  /*background-color: #292929;*/
+  position: absolute;
+  display: block;
+  width: 100%;
+}
+.logoAcme{
+  width : 10%;
+  transition: opacity 2s ease;
+  animation : logoDown;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1.5s;
+}
+.backgroundimg{
+  position: absolute;
+  width:100%;
+}
+.navbar {
+  position: absolute;
+  top: 20.7%;
+  margin: 0 13%;
+  left: auto;
+  right:auto;
+  height: 6.3vw;
+  width: 74%;
+  background: #292929;
+  z-index: 1;
+  text-align: center;
+  display: inline-block;
+}
+.navbarOptions{
+  letter-spacing: 0em;
+  display: inline-block;
+  height: 6.3vw;
+  vertical-align: top;
+  padding: 0vw 1vw;
+  text-decoration: none;
+}
+.homeLinks{
+  font-family: "BebasNeue",sans-serif;
+  color: #E0E0E0;
+  line-height: 3.2em;
+  transform: scale(1,1.5);
+  -webkit-transform:scale(1,1.5); /* Safari and Chrome */
+  -moz-transform:scale(1,1.5); /* Firefox */
+  font-size: 0.71em;
+  margin: 1vw 0vw 0vw;
+}
+.homePage{
+  font-family: "BebasNeue",sans-serif;
+  line-height: 3.2em;
+  transform: scale(1,1.5);
+  -webkit-transform:scale(1,1.5); /* Safari and Chrome */
+  -moz-transform:scale(1,1.5); /* Firefox */
+  font-size: 0.71em;
+  margin: 1.6vw 0vw 0vw 0vw;
+  color:#292929;
+}
+#homePage{
+  background-color: #FFC815;
+  margin-left: 3vw;
+}
+.animNavbar{
+  background-color: #FFC815;
+  bottom: 0%;
+  height: 10%;
+  width: 0%;
+  left: -21%;
+  position: relative;
+  transition: all 0.35s ease;
+  top: 90%;
+}
+
+.navbar a:hover > .animNavbar{
+  width: 139%;
+  /*width: 100%;*/
+
+}
+.navbarOptions2{
+  letter-spacing: 0em;
+  display: inline-block;
+  height: 6.3vw;
+  vertical-align: top;
+  padding: 0vw 1.313vw;
+  text-decoration: none;
+  background-color: #575757;
+}
+.homeLinks2{
+  font-family: "BebasNeue",sans-serif;
+  color: #E0E0E0;
+  line-height: 5em;
+  transform: scale(1,1.5);
+  -webkit-transform:scale(1,1.5); /* Safari and Chrome */
+  -moz-transform:scale(1,1.5); /* Firefox */
+  font-size: 0.54em;
+  margin: 1.6vw 0vw 0vw 0vw;
+}
+.scope{
+  display: inline-block;
+}
+svg{
+  padding: 2vw 1.5vw 2.3vw 1vw;
+  width: 2vw;
+  height: 2vw;
+}
+#claque1 {
+  width :30%;
+}
+path{
+  -webkit-transform:scale(2,2); /* Safari and Chrome */
+  -moz-transform:scale(2,2); /* Firefox */
+}

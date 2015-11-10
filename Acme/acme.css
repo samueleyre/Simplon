@@ -1,0 +1,255 @@
+body{
+  width :100%;
+  background-color: #292929;
+  margin: 0;
+}
+
+.logoAcmeBox{
+  margin: 0%;
+text-align: center;
+padding: 16% 0 5.7% 0;
+z-index: 3;
+/*background-color: #292929;*/
+position: absolute;
+display: block;
+width: 100%;
+animation : logoPaddingDecrease;
+animation-iteration-count: 1;
+animation-timing-function: ease-in;
+animation-duration: 1.5s;
+animation-delay: 2s;
+animation-fill-mode:forwards;
+}
+
+@keyframes logoPaddingDecrease {
+  0% {
+  }
+  100% {
+      padding: 5% 0 5.7% 0;
+  }
+}
+
+
+.logoAcme{
+  width : 10%;
+  transition: opacity 2s ease;
+  animation : logoDown;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1.5s;
+}
+/*
+.bartopleft{
+  position: absolute;
+  top: 50%;
+  margin: 0 0%;
+  left: auto;
+  right:auto;
+  height: 78%;
+  width: 13%;
+  background: #292929;
+  z-index: 2;
+}
+.bartopRight{
+  position: absolute;
+  top: 50%;
+  margin: 0 0%;
+  left: auto;
+  right:0;
+  height: 78%;
+  width: 13%;
+  background: #292929;
+  z-index: 2;
+}
+.bartopbottom{
+  position: absolute;
+  top: 59.8%;
+  margin: 0 13%;
+  left: auto;
+  right:auto;
+  height: 68%;
+  width: 74%;
+  background: #292929;
+  z-index: 2;
+
+}*/
+
+.backgroundimg{
+  position: absolute;
+  width:100%;
+  animation-name: upBackgroundloader;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1.5s;
+  z-index: -99;
+
+}
+.bar{
+  position: absolute;
+  background: transparent none repeat scroll 0% 0%;
+  color: #292929;
+  margin: 0px;
+  padding: 4.1vw 1vw 2vw;
+  border-width: 26vw 13vw 21vw 13vw;
+  border-style: solid;
+  border-color: #292929;
+  z-index: 0;
+  background: transparent;
+  transition: 2s ease;
+  animation-name: openWindow;
+  animation-iteration-count: 1s;
+  animation-timing-function: ease-in;
+  animation-duration: 1.5s;
+  animation-fill-mode:forwards;
+  -webkit-animation-delay: 2s; /* Chrome, Safari, Opera */
+   animation-delay: 2s;
+   width:100%;
+   box-sizing: border-box;
+}
+@keyframes openWindow {
+  0% {
+  }
+  100% {
+      border-width: 0vw;
+      padding : 46vw 49vw;
+      visibility: hidden;
+  }
+}
+/*.bartest {
+  position: absolute;
+  top: 19%;
+  margin: 0 13%;
+  left: auto;
+  right:auto;
+  height: 6.3vw;
+  width: 74%;
+  background: green;
+  z-index: 1;
+}*/
+
+
+.bar0 {
+  position: absolute;
+  top: 50%;
+  margin: 0 13%;
+  left: auto;
+  right:auto;
+  height: 6.3vw;
+  width: 74%;
+  background: #ffc815;
+  z-index: 1;
+  transition: 2s ease;
+  animation : dropHeader, levelHeader 1s 2s,undropHeader 1s 4s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1.5s;
+  /*animation-name: levelHeader;*/
+  animation-fill-mode:forwards;
+  /*animation-delay: 2s;*/
+
+}
+/*.bar0:hover {
+  transition: 5s ease;
+  transform : translateX(-50%);
+
+}*/
+/*levelHeader 1s 2s*/
+
+@keyframes dropHeader {
+    0% {
+        width:0%;
+    }
+    100% {
+        width :74%;
+    }
+}
+@keyframes undropHeader {
+    0% {
+
+
+    }
+    100% {
+        width: 0%;
+    }
+}
+@keyframes levelHeader {
+    0% {
+        /*transform: translateX(0);*/
+    }
+    100% {
+        transform: translateY(-240%);
+    }
+}
+
+@keyframes upBackgroundloader {
+    0% {
+        transform: translateY(40%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes logoDown {
+    0% {
+        transform: translateY(-50%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+  /*background: url("http://acme-world.com/wp-content/themes/immersivegarden/images/case-studies.jpg");*/
+
+  /*#myelement
+  {
+  	position: relative;
+  	overflow: hidden;
+  	-webkit-transform: rotate(30deg);
+  	-moz-transform: rotate(30deg);
+  	-ms-transform: rotate(30deg);
+  	-o-transform: rotate(30deg);
+  	transform: rotate(30deg);
+  }
+
+  #myelement:before
+  {
+  	content: "";
+  	position: absolute;
+  	width: 200%;
+  	height: 200%;
+  	top: -50%;
+  	left: -50%;
+  	z-index: -1;
+  	background: url(background.png) 0 0 repeat;
+  	-webkit-transform: rotate(-30deg);
+  	-moz-transform: rotate(-30deg);
+  	-ms-transform: rotate(-30deg);
+  	-o-transform: rotate(-30deg);
+  	transform: rotate(-30deg);
+  }*/
+
+
+
+
+
+
+
+
+
+
+
+/*Loading page*/
+
+
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	/*background: url(http://smallenvelop.com/wp-content/uploads/2014/08/Preloader_8.gif) center no-repeat #fff;*/
+}

@@ -1,0 +1,51 @@
+body{
+  /*background-color: green;*/
+  width: 100%;
+}
+.navbar {
+  position: absolute;
+  top: 20.7%;
+  margin: 0 13%;
+  left: auto;
+  right:auto;
+  height: 6.3vw;
+  width: 74%;
+  background: #292929;
+  z-index: 1;
+  text-align: center;
+  display: inline-block;
+}
+.navbarOptions{
+  letter-spacing: 0em;
+  display: inline-block;
+  height: 6.3vw;
+  vertical-align: top;
+  padding: 0vw 1vw;
+  text-decoration: none;
+}
+.homeLinks{
+  font-family: "BebasNeue",sans-serif;
+  color: #E0E0E0;
+  line-height: 3.2em;
+  transform: scale(1,1.5);
+  -webkit-transform:scale(1,1.5); /* Safari and Chrome */
+  -moz-transform:scale(1,1.5); /* Firefox */
+  font-size: 0.71em;
+  margin: 1vw 0vw 0vw;
+}
+.animNavbar{
+  background-color: #FFC815;
+  bottom: 0%;
+  height: 10%;
+  width: 0%;
+  left: -21%;
+  position: relative;
+  transition: all 0.35s ease;
+  top: 90%;
+}
+
+.navbar a:hover > .animNavbar{
+  width: 139%;
+  /*width: 100%;*/
+
+}
