@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jeuxmémo</title>
+  <style media="screen">
+  .container{
+    /*background-color: red;*/
+    width: 80%;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  a{
+    display: inline-block;
+
+  }
+   .box{
+     width: 7vw;
+    height: 8vw;
+    background : white;
+    border: 4vw solid rgba(0, 0, 0, 0.5);
+    position: relative;
+    vertical-align: top;
+    padding: 2vw;
+    color:white;
+    border-radius: 4vw;
+   }
+   button{
+     height: 5vw;
+     width: 36vw;
+   }
+  </style>
+</head>
+<body>
+<div class="container">
+  <a onclick="clicked(1)">
+  <div class="box" id="box1">
+  </div>
+</a><a onclick="clicked(2)">
+  <div class="box" id="box2">
+  </div>
+  </a><a onclick="clicked(3)">
+  <div class="box" id="box3">
+  </div>
+  </a><a onclick="clicked(4)">
+  <div class="box" id="box4">
+  </div>
+  </a><a onclick="clicked(5)">
+  <div class="box" id="box5">
+  </div>
+</a><a onclick="clicked(6)">
+  <div class="box" id="box6">
+  </div>
+  </a><a onclick="clicked(7)">
+  <div class="box" id="box7">
+  </div>
+  </a><a onclick="clicked(8)">
+  <div class="box" id="box8">
+  </div>
+  </a><a onclick="clicked(9)">
+  <div class="box" id="box9">
+  </div>
+  </a><a onclick="clicked(10)">
+  <div class="box" id="box10">
+  </div>
+  </a><a onclick="clicked(11)">
+  <div class="box" id="box11">
+  </div>
+  </a><a onclick="clicked(12)">
+  <div class="box" id="box12">
+  </div>
+  </a><a onclick="clicked(13)">
+  <div class="box" id="box13">
+  </div>
+  </a><a onclick="clicked(14)">
+  <div class="box" id="box14">
+  </div>
+  </a><a onclick="clicked(15)">
+  <div class="box" id="box15">
+  </div>
+  </a><a onclick="clicked(16)">
+  <div class="box" id="box16">
+  </div>
+  </a>
+</div>
+
+  <script type="text/javascript">
+
+  var boxNumber = "";
+  var boxes = [];
+  var clicks = [];
+  for (var i = 0; i < 16; i++) {
+    boxes[i] = false;
+  }
+  var count = 0;
+  var clicklength = 0;
+  var offclick = "";
+  function clicked(val){
+  console.log(boxes);
+    clicks.push(val);
+    console.log("clicks= " + clicks);
+
+      // document.getElementById(boxNumber).style.background="white";
+      if (boxes[val-1] === false) {
+      on(val);
+      console.log(boxes[val-1]);
+      count = 0;
+      for(var i = 0; i < boxes.length; i++){
+        if(boxes[i] === true){
+        count++;
+        }
+      }
+      console.log("count= "+count);
+      if (count > 2) {
+        clicklength = (clicks.length-3);
+        console.log("length =" +clicklength);
+        offclick = clicks[clicklength];
+        console.log("offclick =" + offclick);
+
+        off(parseInt(offclick));
+
+        return;
+      }
+      }
+      else {
+      off(val);
+      console.log('off');
+      return;
+      }
+  }
+
+  function on(val) {
+    boxNumber = "box" + val;
+    document.getElementById(boxNumber).style.color="black";
+    boxes[val - 1] = true;
+    return;
+  }
+  function off(val) {
+    boxNumber = "box" + val;
+    document.getElementById(boxNumber).style.color="white";
+    boxes[val - 1] = false;
+    return;
+  }
+
+
+
+
+  </script>
+</body>
+</html>
