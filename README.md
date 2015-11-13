@@ -2,11 +2,11 @@
 Simplon exercices and Projects
 
 
-#To visualize the Airbnb Website:
+#To visualize the Airbnb Website - open with chrome:
 
 *https://htmlpreview.github.io/?https://github.com/samueleyre/Simplon/blob/master/airbnb/airbnb.html*
 
-#To visualize the Acme Website:
+#To visualize the Acme Website - only animations - open with firefox:
 
 *https://htmlpreview.github.io/?https://github.com/samueleyre/Simplon/blob/master/Acme/acmeAnimation.html*
 
