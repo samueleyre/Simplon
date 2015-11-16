@@ -1,0 +1,115 @@
+body{
+  width:100%;
+  margin:0;
+}
+
+.displayFlex{
+  display: flex;
+  border: solid black;
+}
+
+.red{
+  background-color: red;
+  width: 50px;
+  height:50px;
+}
+.green{
+  background-color: green;
+  width: 50px;
+  height:50px;
+}
+.blue{
+  background-color: blue;
+  width: 50px;
+  height:50px;
+}
+
+
+.flexDirection{
+  border: solid black;
+  display: flex;
+}
+
+.flexWrap{
+  border: solid black;
+  display:flex;
+}
+
+.Column{
+  flex-direction: column;
+}
+.Row{
+  flex-direction: row;
+}
+.ColumnReverse{
+  flex-direction: column-reverse;
+}
+.RowReverse{
+  flex-direction: row-reverse;
+}
+.nowrap{
+  flex-wrap: nowrap;
+}
+.wrap{
+  flex-wrap: wrap;
+}
+.wrapreverse{
+  flex-wrap: wrap-reverse;
+}
+
+.Bigred{
+  background-color: red;
+  width: 500px;
+  height:50px;
+}
+.Biggreen{
+  background-color: green;
+  width: 500px;
+  height:50px;
+}
+.Bigblue{
+  background-color: blue;
+  width: 500px;
+  height:50px;
+}
+
+.flexFlowRowReverseWrap{
+  display:flex;
+  flex-flow: row-reverse; wrap;
+  border: solid black;
+
+}
+
+.flexFlowColumnReverseNowrap{
+  display:flex;
+  flex-flow: column-reverse nowrap;
+  border: solid black;
+
+}
+
+.justify{
+  display:flex;
+  border: solid black;
+}
+.flexStart{
+  justify-content: flex-start;
+}
+.flexEnd {
+  justify-content: flex-end;
+}
+.center {
+  justify-content: center;
+}
+.spaceBetween{
+  justify-content: space-between;
+}
+.spaceAround{
+  justify-content: space-around;
+}
+
+
+
+
+
+
+flex-flow: <‘flex-wrap’>
