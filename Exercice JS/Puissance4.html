@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style media="screen">
+  body{
+    margin: 0px 211px 116px;
+    right: 0px;
+    width: 100%;
+    text-align: center;
+    background-color: #FAFAD2;
+}
+  .Winmessagebox{
+    position: absolute;
+    z-index: 2;
+    margin: 22%;
+    background: transparent;
+  }
+    .container{
+      background-color: #ADD8E6;
+      border: 1px solid #989797;
+      padding: 20px;
+      width: 62%;
+      height: 47vw;
+      text-align: center;
+      box-shadow: -28px 12px 5px #888888;
+}
+    .box{
+      padding: 40px;
+      background-color: #FFF;
+      display: inline-flex;
+      margin: 5px;
+      width: 15px;
+      border-radius: 84px;
+      height: 13px;
+}
+.container::selection {
+background-color:transparent;
+color:#000;
+}
+  </style>
+  <body>
+    <div class="container" unselectable="on">
+      <div class="Winmessagebox" unselectable="on"><h1 unselectable="on" id="winMessage"></h1></div>
+      <div class="box" onclick="insert('[0,5]')" id="[0,5]">
+      </div><div class="box" onclick="insert('[1,5]')" id="[1,5]">
+      </div><div class="box" onclick="insert('[2,5]')" id="[2,5]">
+      </div><div class="box" onclick="insert('[3,5]')" id="[3,5]">
+      </div><div class="box" onclick="insert('[4,5]')" id="[4,5]">
+      </div><div class="box" onclick="insert('[5,5]')" id="[5,5]">
+      </div><div class="box" onclick="insert('[6,5]')" id="[6,5]">
+      </div><div class="box" onclick="insert('[0,4]')" id="[0,4]">
+      </div><div class="box" onclick="insert('[1,4]')" id="[1,4]">
+      </div><div class="box" onclick="insert('[2,4]')" id="[2,4]">
+      </div><div class="box" onclick="insert('[3,4]')" id="[3,4]">
+      </div><div class="box" onclick="insert('[4,4]')" id="[4,4]">
+      </div><div class="box" onclick="insert('[5,4]')" id="[5,4]">
+      </div><div class="box" onclick="insert('[6,4]')" id="[6,4]">
+      </div><div class="box" onclick="insert('[0,3]')" id="[0,3]">
+      </div><div class="box" onclick="insert('[1,3]')" id="[1,3]">
+      </div><div class="box" onclick="insert('[2,3]')" id="[2,3]">
+      </div><div class="box" onclick="insert('[3,3]')" id="[3,3]">
+      </div><div class="box" onclick="insert('[4,3]')" id="[4,3]">
+      </div><div class="box" onclick="insert('[5,3]')" id="[5,3]">
+      </div><div class="box" onclick="insert('[6,3]')" id="[6,3]">
+      </div><div class="box" onclick="insert('[0,2]')" id="[0,2]">
+      </div><div class="box" onclick="insert('[1,2]')" id="[1,2]">
+      </div><div class="box" onclick="insert('[2,2]')" id="[2,2]">
+      </div><div class="box" onclick="insert('[3,2]')" id="[3,2]">
+      </div><div class="box" onclick="insert('[4,2]')" id="[4,2]">
+      </div><div class="box" onclick="insert('[5,2]')" id="[5,2]">
+      </div><div class="box" onclick="insert('[6,2]')" id="[6,2]">
+      </div><div class="box" onclick="insert('[0,1]')" id="[0,1]">
+      </div><div class="box" onclick="insert('[1,1]')" id="[1,1]">
+      </div><div class="box" onclick="insert('[2,1]')" id="[2,1]">
+      </div><div class="box" onclick="insert('[3,1]')" id="[3,1]">
+      </div><div class="box" onclick="insert('[4,1]')" id="[4,1]">
+      </div><div class="box" onclick="insert('[5,1]')" id="[5,1]">
+      </div><div class="box" onclick="insert('[6,1]')" id="[6,1]">
+      </div><div class="box" onclick="insert('[0,0]')" id="[0,0]">
+      </div><div class="box" onclick="insert('[1,0]')" id="[1,0]">
+      </div><div class="box" onclick="insert('[2,0]')" id="[2,0]">
+      </div><div class="box" onclick="insert('[3,0]')" id="[3,0]">
+      </div><div class="box" onclick="insert('[4,0]')" id="[4,0]">
+      </div><div class="box" onclick="insert('[5,0]')" id="[5,0]">
+      </div><div class="box" onclick="insert('[6,0]')" id="[6,0]">
+      </div>
+
+
+    </div>
+    <script type="text/javascript">
+    var color = "green";
+    var x;
+    var y;
+    var cR =0;
+    var cG =0;
+    var colorRead;
+    var Id;
+    var xmaxed = [];
+    var PrevColor;
+    var Idm;
+for (y = 0; y < 6; y++) {
+        for (x = 0; x < 7; x++) {
+          Id = '['+x+','+y+']';
+          Id.toString();
+          document.getElementById(Id).style.backgroundColor = "white";
+        }
+}
+
+function opposite(color){
+  if (color === "green"){color="red";}
+  else if (color === "red"){color="green";}
+  return color;
+}
+function vC(CRG) {
+  if (CRG === 4) {
+    console.log("won!");
+    opposite = opposite(color);
+    document.getElementById('winMessage').innerHTML = color + " has Won ! " + opposite + " has lost ! ";
+    return;
+  }
+}
+function setColor(val) {
+  for ( y = 0; y < 6; y++) {
+    x = val[1];
+    Id = '['+x+','+y+']';
+    Id.toString();
+    PrevColor = document.getElementById(Id).style.backgroundColor;
+    if ((PrevColor !== "green") && (PrevColor !== "red")){
+          document.getElementById(Id).style.backgroundColor = color;
+          return;
+    }
+  }
+}
+function changeColor(val) {
+  console.log("OOOOOOOOOOOOOO");
+  x = val[1];
+  console.log("motherfuckery " + y);
+  console.log("xmaxed " + xmaxed);
+  console.log(xmaxed.indexOf(x.toString()));
+  if (xmaxed.indexOf(x.toString()) === -1) {
+    console.log("OOOOOOOOOOOOOO");
+    Idm = '['+x+','+5+']';
+    if ((document.getElementById(Idm).style.backgroundColor === "green") || (document.getElementById(Idm).style.backgroundColor === "red")) {
+      console.log("OOOuuuuiiiii");
+
+      xmaxed.push(x);
+    }
+    color = opposite(color);
+    return;
+  }
+  else {
+    return;
+  }
+}
+
+function insert(val) {
+  // console.log("Vallll" + val[3]);
+
+  setColor(val);
+
+  // console.log(val);
+  // for (var i = 0; i < picked.length; i++) {
+  //   if (picked[i] === val) {
+  //     return;
+  //   }
+  // }
+  // picked.push(val);
+  // document.getElementById(val).style.backgroundColor = color;
+  for (y = 0; y < 6; y++) {
+  cG = 0;
+  cR = 0;
+      for (x = 0; x < 7; x++) {
+        Id = '['+x+','+y+']';
+        Id.toString();
+        colorRead = document.getElementById(Id).style.backgroundColor;
+        // console.log(colorRead);
+        if (colorRead === "green") {
+          cG += 1;
+          console.log("cG1 " + cG);
+          cR = 0;
+          vC(cG);
+        }
+        else if (colorRead === "red") {
+          cR += 1;
+          console.log("cR1 " + cR);
+          cG = 0;
+          vC(cR);
+        }
+        else if (colorRead === "white") {
+          cR = 0;
+          cG = 0;
+        }
+      }
+  }
+  for (x = 0; x < 7; x++) {
+  cG = 0;
+  cR = 0;
+      for (y = 0; y < 6; y++) {
+        Id = '['+x+','+y+']';
+        Id.toString();
+        colorRead = document.getElementById(Id).style.backgroundColor;
+        // console.log(colorRead);
+        if (colorRead === "green") {
+          cG += 1;
+          console.log("cG2 " + cG);
+          cR = 0;
+          vC(cG);
+        }
+        else if (colorRead === "red") {
+          cR += 1;
+          console.log("cR2 " + cR);
+          cG = 0;
+          vC(cR);
+        }
+        else if (colorRead === "white") {
+          cR = 0;
+          cG = 0;
+        }
+      }
+  }
+  // Diagonale Gauche Droite
+  var diags = [[0,3,2],[0,4,1],[0,5,0],[1,6,-1],[2,6,-2],[3,6,-3]];
+  console.log(diags);
+  console.log(diags[1][1]);
+  for (var i = 0; i < 6; i++) {
+  cG = 0;
+  cR = 0;
+    for (x = diags[i][0]; x < diags[i][1]+1; x++) {
+      // console.log(diags[i]);
+      y = x + diags[i][2];
+      // console.log("x and y : " + x + " " + y)
+      Id = '['+x+','+y+']';
+      Id.toString();
+      colorRead = document.getElementById(Id).style.backgroundColor;
+      if (colorRead === "green") {
+        cG += 1;
+        console.log("cG3 " + cG);
+        cR = 0;
+        vC(cG);
+      }
+      else if (colorRead === "red") {
+        cR += 1;
+        console.log("cR3 " + cR);
+        cG = 0;
+        vC(cR);
+      }
+      else if (colorRead === "white") {
+        cR = 0;
+        cG = 0;
+      }
+    }
+  }
+  diags = [[0,3,0],[0,4,0],[0,5,0],[1,6,0],[2,6,1],[3,6,2]];
+  for (var i = 0; i < 6; i++) {
+  cG = 0;
+  cR = 0;
+    for (x = diags[i][0]; x < diags[i][1]+1; x++) {
+      // console.log(diags[i]);
+      y = diags[i][1] - x + Math.abs(diags[i][2]);
+      // console.log("x and y : " + x + " " + y)
+      Id = '['+x+','+y+']';
+      Id.toString();
+      colorRead = document.getElementById(Id).style.backgroundColor;
+      if (colorRead === "green") {
+        cG += 1;
+        console.log("cG4 " + cG);
+        cR = 0;
+        vC(cG);
+      }
+      else if (colorRead === "red") {
+        cR += 1;
+        console.log("cR4 " + cR);
+        cG = 0;
+        vC(cR);
+      }
+      else if (colorRead === "white") {
+        cR = 0;
+        cG = 0;
+      }
+    }
+
+  }
+  changeColor(val);
+    return;
+}
+
+    </script>
+  </body>
+</html>
