@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>Direction</title>
+<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="testIFrame.css">
+<script type="text/javascript">
+function submitTryit() {
+  var text = document.getElementById("textareaCode").value;
+  var ifr = document.createElement("iframe");
+  ifr.setAttribute("frameborder", "0");
+  ifr.setAttribute("id", "iframeResult");
+  document.getElementById("iframewrapper").innerHTML = "";
+  document.getElementById("iframewrapper").appendChild(ifr);
+  var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+  ifrw.document.open();
+  ifrw.document.write(text);
+  ifrw.document.close();
+}
+</script>
+<style>
+
+</style>
+</head>
+<body>
+<div id='tryitLeaderboard'>
+  <h1>Flex Direction</h1>
+</div>
+
+<div class="container">
+  <div class="textareacontainer">
+    <div class="textarea">
+      <div style="overflow:auto;">
+        <div class="headerText">Edit This Code:</div>
+        <button class="seeResult" type="button" onclick="submitTryit()">See Result &raquo;</button>
+      </div>
+      <div class="textareawrapper">
+        <textarea autocomplete="off" class="code_input" id="textareaCode" wrap="logical" spellcheck="false"><!DOCTYPE html>
+<html>
+<head>
+<style media="screen">
+
+
+.red{
+  background-color: red;
+  width: 50px;
+  height:50px;
+}
+.green{
+  background-color: green;
+  width: 50px;
+  height:50px;
+}
+.blue{
+  background-color: blue;
+  width: 50px;
+  height:50px;
+}
+
+
+.flexDirection{
+  border: solid black;
+  display: flex;
+}
+.Column{
+  flex-direction: column;
+}
+.Row{
+  flex-direction: row;
+}
+.ColumnReverse{
+  flex-direction: column-reverse;
+}
+.RowReverse{
+  flex-direction: row-reverse;
+}
+
+
+</style>
+
+</head>
+  <body>
+
+    <div class="flexDirection Column">
+      <div class="red"></div>
+      <div class="green"></div>
+      <div class="blue"></div>
+    </div>
+    <div class="flexDirection Row">
+      <div class="red"></div>
+      <div class="green"></div>
+      <div class="blue"></div>
+    </div>
+    <div class="flexDirection ColumnReverse">
+      <div class="red"></div>
+      <div class="green"></div>
+      <div class="blue"></div>
+    </div>
+    <div class="flexDirection RowReverse">
+      <div class="red"></div>
+      <div class="green"></div>
+      <div class="blue"></div>
+    </div>
+  </body>
+</html>
+
+
+</textarea>
+          <form autocomplete="off" style="margin:0px;display:none;">
+            <input type="hidden" name="code" id="code" />
+            <input type="hidden" id="bt" name="bt" />
+          </form>
+       </div>
+    </div>
+  </div>
+  <div class="iframecontainer">
+    <div class="iframe">
+      <div style="overflow:auto;">
+        <div class="headerText">Result:</div>
+      </div>
+      <div id="iframewrapper" class="iframewrapper">
+
+      </div>
+    </div>
+  </div>
+  <div class="footerText">Try it Yourself - &copy; <a href="http://www.w3schools.com">w3schools.com</a></div>
+</div>
+<script>submitTryit()</script>
+</body>
+</html>

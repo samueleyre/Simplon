@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>Display Flex</title>
+<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="testIFrame.css">
+<script type="text/javascript">
+function submitTryit() {
+  var text = document.getElementById("textareaCode").value;
+  var ifr = document.createElement("iframe");
+  ifr.setAttribute("frameborder", "0");
+  ifr.setAttribute("id", "iframeResult");
+  document.getElementById("iframewrapper").innerHTML = "";
+  document.getElementById("iframewrapper").appendChild(ifr);
+  var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+  ifrw.document.open();
+  ifrw.document.write(text);
+  ifrw.document.close();
+}
+</script>
+<style>
+
+</style>
+</head>
+<body>
+<div id='tryitLeaderboard'>
+  <h1>Flex</h1>
+</div>
+
+<div class="container">
+  <div class="textareacontainer">
+    <div class="textarea">
+      <div style="overflow:auto;">
+        <div class="headerText">Edit This Code:</div>
+        <button class="seeResult" type="button" onclick="submitTryit()">See Result &raquo;</button>
+      </div>
+      <div class="textareawrapper">
+        <textarea autocomplete="off" class="code_input" id="textareaCode" wrap="logical" spellcheck="false"><!DOCTYPE html>
+<html>
+<head>
+<style media="screen">
+.displayFlex{
+  height: 400px;
+  display: flex;
+  border: solid black;
+  /*flex-wrap: wrap;*/
+  justify-content: center;
+  align-items : flex-start;
+  align-items : flex-end;
+  align-items : center;
+  align-items : baseline;
+}
+
+.red{
+  background-color: red;
+  width: 50px;
+  height:50px;
+}
+.green1{
+  background-color: green;
+  width: 50px;
+  height:60px;
+}
+.green2{
+  background-color: green;
+  width: 50px;
+  height:70px;
+}
+.green3{
+  background-color: green;
+  width: 50px;
+  height:80px;
+}
+.blue{
+  background-color: blue;
+  width: 50px;
+  height:90px;
+}
+
+
+.flexDirection{
+  border: solid black;
+  display: flex;
+}
+.Column{
+  flex-direction: column;
+}
+.properties{
+  display: inline-block;
+  vertical-align: top;
+  margin: 4px;
+}
+
+</style>
+
+</head>
+<body>
+
+  <div class="displayFlex">
+    <div class="red properties"></div>
+    <div class="green1 properties"></div>
+    <div class="green2 properties"></div>
+    <div class="green3 properties"></div>
+    <div class="blue properties"></div>
+  </div>
+
+</body>
+</html>
+
+
+</textarea>
+          <form autocomplete="off" style="margin:0px;display:none;">
+            <input type="hidden" name="code" id="code" />
+            <input type="hidden" id="bt" name="bt" />
+          </form>
+       </div>
+    </div>
+  </div>
+  <div class="iframecontainer">
+    <div class="iframe">
+      <div style="overflow:auto;">
+        <div class="headerText">Result:</div>
+      </div>
+      <div id="iframewrapper" class="iframewrapper">
+
+      </div>
+    </div>
+  </div>
+  <div class="footerText">Try it Yourself</div>
+</div>
+<script>
+submitTryit();
+
+</script>
+</body>
+</html>
