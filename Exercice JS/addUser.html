@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>addUSer</title>
+    <style>
+       .block{
+         background-color: lightgrey;
+   width: 28vw;
+   margin: 2vw;
+   font-size: 1.6vw;
+   padding: 0.6vw;
+}
+
+      .Button{
+        float : right;
+        height: 2.6vw;
+width: 3vw;
+margin: -0.3vw 0vw;
+}
+
+
+    </style>
+</head>
+<body>
+  <form id="form" method="get">
+    <label for="name ">Name </label><input type="text" name="Name" placeholder="name " value></input>
+    <label for="firstName ">First Name </label><input type="text" name="firstName" placeholder="first name "></input>
+    <button onclick="sendInfo()" type="button" name="button">SEND</button>
+  </form>
+
+<div id="listDiv">
+
+</div>
+
+</body>
+<script type="text/javascript">
+
+    var Name = "";
+    var FirstName = "";
+    var NamefirstName = "";
+    var iDiv;
+    var f;
+    var but;
+    var Parent;
+    var NamefirstNameBut;
+
+  function sendInfo() {
+      f = document.getElementById('form');
+      Name = f.Name.value;
+      FirstName = f.firstName.value;
+      NamefirstName = Name + FirstName;
+      if (document.getElementById(NamefirstName) !== null || (Name === "" || FirstName === "")) {
+        console.log("it works");
+      return;
+      }
+      addName(NamefirstName);
+      return;
+  }
+
+function addName(NamefirstName){
+    but = document.createElement('button');
+    but.innerHTML = "x";
+    but.className = "Button";
+    but.id= NamefirstName + "c";
+    but.onclick = function() {closeit(NamefirstName);};
+    //  input.onclick = function() { conn.send('$connect\r\n'); };
+    iDiv = document.createElement('div');
+    iDiv.id = NamefirstName;
+    iDiv.className = 'block';
+    console.log(NamefirstName);
+    document.getElementById('listDiv').appendChild(iDiv);
+    document.getElementById(NamefirstName).innerHTML= Name + " "+ FirstName;
+    iDiv.appendChild(but);
+    return;
+}
+
+function closeit(NamefirstName){
+    But = document.getElementById(NamefirstName + "c");
+    NamefirstName = document.getElementById(NamefirstName);
+    Parent = document.getElementById("listDiv");
+    Parent.removeChild(NamefirstName);
+    Parent.removeChild(But);
+    return;
+}
+
+
+</script>
+
+</html>
