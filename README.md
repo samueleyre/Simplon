@@ -20,4 +20,9 @@ Simplon exercices and Projects
 *https://htmlpreview.github.io/?https://github.com/samueleyre/Simplon/blob/master/Maquette/ClickablePhotos.html*
 
 
+#New "AjoutUtilisateurs" :
+
+*https://htmlpreview.github.io/?https://github.com/samueleyre/Simplon/blob/master/Exercice%20JS/addUser.html*
+
+
  
