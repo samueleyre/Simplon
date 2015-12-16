@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>Ronflex</title>
+<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="flexRonflex.css">
+<script type="text/javascript">
+function submitTryit() {
+  var text = document.getElementById("textareaCode").value;
+  var ifr = document.createElement("iframe");
+  ifr.setAttribute("frameborder", "0");
+  ifr.setAttribute("id", "iframeResult");
+  document.getElementById("iframewrapper").innerHTML = "";
+  document.getElementById("iframewrapper").appendChild(ifr);
+  var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+  ifrw.document.open();
+  ifrw.document.write(text);
+  ifrw.document.close();
+}
+</script>
+<style>
+.imgL{
+  max-width: 8vw;
+  /*left : 0vw;*/
+  float:left;
+  position: relative;
+}
+.imgR{
+  max-width: 8vw;
+  /*left : 0vw;*/
+  float:right;
+  position: relative;
+}
+h3{
+  float:right;
+  position: relative;
+  font-size: 1em;
+  margin-right: 50vw;
+}
+</style>
+</head>
+<body>
+<div id='tryitLeaderboard'>
+<img src="Logo.png" class="imgR" alt="" />
+<h3> zzzZZzzZz zzzzzZZZZZzz zzzZZZZZzzz         </h3>
+<img src="Logo.png" class="imgL"alt="" /></div>
+
+
+<div class="container">
+  <div class="textareacontainer">
+    <div class="textarea">
+      <div style="overflow:auto;">
+        <div class="headerText"></div>
+        <button class="seeResult" type="button" onclick="submitTryit()">Transform him. &raquo;</button>
+      </div>
+      <div class="textareawrapper">
+        <textarea autocomplete="off" class="code_input" id="textareaCode" wrap="logical" spellcheck="false"><!DOCTYPE html>
+<html>
+<head>
+<style media="screen">
+.displayFlex{
+  height: 60vw;
+  width: 80vw;
+  display: flex;
+  /*flex-wrap: wrap;*/
+  align-content : flex-start;
+  /*align-content : flex-end;*/
+  /*align-content : center;*/
+  /*align-content : stretch;*/
+  /*align-content : space-between;*/
+  /*align-content : space-around;*/
+}
+
+
+
+.properties{
+  height: 100px;
+  width: 100px;
+}
+.p1{
+  order: 1;
+}
+.p2{
+  order :2;
+}
+.p3{
+  order: 3;
+}
+.p4{
+  order: 4;
+}
+.p5{
+  order: 5;
+}
+.p6{
+  order: 6;
+}
+
+
+</style>
+
+</head>
+<body>
+
+  <div class="displayFlex">
+  </div>
+  <script type="text/javascript">
+  var divi;
+  var ImgUrl;
+  for (var i = 1; i < 7; i++) {
+    divi = document.createElement('div');
+    Boody = document.getElementsByClassName('displayFlex')[0];
+    Boody.appendChild(divi);
+    divi.className = 'properties p' + i;
+    ImgUrl = "url(Rf" + i + ".png" + ")";
+    divi.innerHTML = i;
+    console.log(ImgUrl);
+    divi.style.backgroundRepeat = "no-repeat";
+    divi.style.backgroundImage = ImgUrl;
+  };
+
+  </script>
+</body>
+
+</html>
+
+
+</textarea>
+          <form autocomplete="off" style="margin:0px;display:none;">
+            <input type="hidden" name="code" id="code" />
+            <input type="hidden" id="bt" name="bt" />
+          </form>
+       </div>
+    </div>
+  </div>
+  <div class="iframecontainer">
+    <div class="iframe">
+      <div style="overflow:auto;">
+        <div class="headerText"></div>
+      </div>
+      <div id="iframewrapper" class="iframewrapper">
+
+      </div>
+    </div>
+  </div>
+  <div class="footerText">Try it Yourself</div>
+</div>
+<script>
+submitTryit();
+
+
+
+</script>
+</body>
+</html>
