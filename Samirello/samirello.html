@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>template</title>
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="samirello.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  <div class="container-fluid">
+
+    <header class="row">
+      <div class="col-sm-2 SamiTrelloContainer">
+        <div class="SamiTrello">
+        <a id="test" onclick="testing()"><img id="samirelloImg" src="imgs/samirellotitle.png" alt=""></div></a>
+      </div>
+      <div class="col-sm-10 headerImage">
+        <div class="listTitle">
+          <h2  class="hideOnStart" id="listTitleId" style="outline: none;" onblur="CancelEditableMode()" onclick="editListTitle()">ha ha</h2>
+          <!-- <button style="margin-top: -3vw; float:right ;" class="hideOnStart" onclick="editListTitle()"> Edit list title </button> -->
+        </div>
+      </div>
+    </header>
+<div class="mainContainer row">
+<div class="col-sm-2 listContainer">
+  <div class="listSelect">
+    <label for="listname">List Name</label>
+    <select id="listname" name="">
+        <option id="0" value="0"> select </option>
+    </select>
+  </div>
+  <div class="inputTitleContainer">
+    <label for="newlist">Add List</label>
+    <input type="text" name="newlist" id="newlist" placeholder=" ... "></input>
+  </div>
+  <div class="addButtonContainer">
+    <button type="button" onclick="insertList()">Send</button>
+  </div>
+</div>
+  <div class="col-sm-7 taskListContainer hideOnStart">
+    <div class="row columnTitlesContainer">
+      <div class="col-sm-3 dateColumnTitleContainer">
+      <h2 class="dateColumnTitle">Date</h2>
+      </div>
+      <div class="col-sm-5 taskColumnTitleContainer">
+      <h2 class="taskColumnTitle">Task</h2>
+      </div>
+      <div class="col-sm-2 nameColumnTitleContainer">
+      <h2 class="nameColumnTitle">Name</h2>
+      </div>
+      <div class="col-sm-2 deleteColumnTitleContainer">
+      <h2 class="deleteColumnTitle"></h2>
+      </div>
+
+    </div>
+    <div class="row columnsContainer ">
+      <div class="col-sm-3 dateColumnContainer" id="dateList">
+
+      </div>
+      <div class="col-sm-5 taskColumnContainer" id="taskList">
+      </div>
+      <div class="col-sm-2 nameColumnContainer" id="nameList">
+      </div>
+      <div class="col-sm-2 deleteColumnContainer" id="deleteList">
+      </div>
+    </div>
+    <div class="deleteButtonContainer" >
+      <button type="button" onclick="deleteList()">Delete List</button>
+    </div>
+  </div>
+  <div class="col-sm-3 addTaskContainer hideOnStart">
+      <div class="addTaskInputs">
+        <div class="taskInputContainer"></div>
+        <label for="task">Task</label>
+          <input class="inputTask hideOnStart" type="text" name="task" id="task" placeholder=" ... "></input>
+        <div class="nameInputContainer"></div>
+        <label for="name">Name</label>
+          <input class="inputTask hideOnStart" type="text" name="name" id="name" placeholder=" ... "></input>
+        <div class="dateInputContainer"></div>
+          <h2 >Date</h2>
+          <form class="hideOnStart dateForm" id="dateForm">
+            <label for="day">Choose Day</label>
+            <input type="number" name="day" id="day" min="1" max="31" value="25"> <br>
+
+            <label for="month">Choose Month</label>
+            <select name="month" id="month">
+              <option value="Jan">Jan</option>
+              <option value="Feb">Feb</option>
+              <option value="Mar">Mar</option>
+              <option value="Apr">Apr</option>
+              <option value="May">May</option>
+              <option value="Jun">Jun</option>
+              <option value="Jul">Jul</option>
+              <option value="Aug">Aug</option>
+              <option value="Sep">Sep</option>
+              <option value="Oct">Oct</option>
+              <option value="Nov">Nov</option>
+              <option value="Dec">Dec</option>
+            </select> <br>
+            <label for="year">Choose Year</label>
+            <input type="number" name="year" id="year" min="2016" max="2020" value="2016">
+
+          </form>
+      </div>
+
+
+
+
+      <div class="addTaskButtonContainer">
+            <button class="hideOnStart" type="button" onclick="insert()">Add Task</button>
+      </div>
+  </div>
+ </div>
+</div>
+
+<script charset="utf-8">
+// var datePicker = new DatePicker($('#datePicker'));
+// datePicker.init();
+
+
+
+
+
+
+
+
+</script>
+
+
+
+  <script src="samirello.js"></script>
+
+
+</body>
+</html>

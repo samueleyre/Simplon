@@ -1,0 +1,251 @@
+#samirelloImg{
+  width: 15vw;
+  margin-left: -0.6vw;
+}
+#listTitleId{
+  margin-top: 0vw;
+  margin-right: 30vw;
+  opacity: 0.5;
+  font-size: 7.5vw;
+
+}
+
+.listSelect{
+  margin: 10vh 0vh;
+}
+
+/*colortemplate;*/
+/*
+dark green #357F11
+#D7FF46
+#6AFF22
+title #327F0D
+#55CC1B
+#E1FF5C
+*/
+
+html{
+  overflow-x: hidden;
+}
+*{
+  /*margin:0;*/
+  /*padding:0;*/
+  font-style : "Courier New", Courier, monospace;
+}
+
+body{
+  /*background-color: #6AFF22;*/
+  background-image: url(imgs/green.jpg);
+  background-size: 190vw;
+  /*background-color: white;*/
+}
+h1{
+  font-size: 3em;
+  font-style: "Lucida Console", Monaco, monospace;
+}
+header{
+  text-align: center;
+  /*display: inline-flex;*/
+
+}
+.SamiTrelloContainer, .headerImage{
+  height: 23vh;
+  /*padding:0;*/
+  /*direction: row;*/
+  display: inline-flex;
+  align-items: center;
+}
+.SamiTrelloContainer{
+  background-color: #327F0D;
+
+}
+
+.SamiTrello{
+  width:100vw;
+}
+
+.headerImage{
+  background-color: rgba(106, 255, 34, 0.8);
+  height: 23vh;
+  display: inline-flex;
+  align-items: center;
+
+  /*padding:0;*/
+
+  /*display: inline-flex;*/
+
+/*align-items: center;*/
+}
+.listTitle{
+  width:100vw;
+
+}
+
+
+.taskListContainer{
+  background-color: rgba(225, 255, 92, 0.8);
+  height: 100vh;
+}
+
+
+
+.listContainer, .addTaskContainer{
+  height: 100vh;
+
+}
+.listContainer{
+  /*margin: 0;*/
+  background-color: #55CC1B;
+}
+.columnTitlesContainer{
+  text-align: center;
+  /*display: inline-flex;*/
+  /*align-items: center;*/
+}
+
+
+.dateColumnTitleContainer, .taskColumnTitleContainer, .nameColumnTitleContainer, .deleteColumnTitleContainer{
+  text-align: center;
+   margin:auto;
+}
+
+.addTaskContainer{
+
+  background-color: rgba(215, 255, 70, 0.8);
+
+}
+
+.listContainer{
+  text-align: center;
+}
+input, button, select{
+  background-color: #E1FF5C;
+  border: none;
+  margin: 1vw;
+  padding: 0.8vh 0.5vw;
+}
+input, select{
+  width: 10vw;
+  border: 1px solid #CCC;
+}
+
+select{
+  color: #000;
+  color: rgba(0,0,0,0);
+  text-shadow: 0 0 0 #000;
+}
+
+button{
+  width: 6vw;
+  margin:3vw;
+}
+
+.addTaskContainer{
+  text-align: center;
+}
+
+.taskInputContainer{
+  margin-top: 5vw;
+}
+
+.addTaskButtonContainer, .deleteButtonContainer{
+  position: absolute;
+  bottom: 1vw;
+    right: 7vw;
+}
+
+.deleteButtonContainer{
+  right: 25.6vw;
+}
+
+
+.dateBlock, .nameBlock, .taskBlock{
+  background-color: rgba(215, 255, 70, 0.9);
+  /*border-style: solid;*/
+  /*border-width: thin;*/
+  padding-right: 1vw;
+  width: 10vw;
+  text-align: center;
+  margin: 1vw;
+  display: inline-block;
+  outline: none;
+}
+
+.nameBlock{
+  width: 6vw;
+}
+
+.taskBlock{
+  width: 20vw;
+}
+
+.delete{
+  display: block;
+  cursor: pointer;
+  margin: 1vw 1.2vw 2vw;
+  width: 19.91px;
+  height: 19.91px;
+}
+
+form input[readonly]{
+     cursor: default;
+     width: 100%;
+     height: 4vh;
+     /*color:#D7FF46;*/
+}
+form input{
+  border:  1px solid #CACACA;
+     /*margin:1vw;*/
+
+}
+
+
+  /*display: inline-flex;
+  flex-direction: row;*/
+form{
+}
+form button{
+  margin:1vh 1vw;
+}
+.formContainer {
+}
+
+ol{
+  margin-bottom: -5px;
+}
+
+.columnsContainer{
+  height: 70vh;
+  /*width: 60vw;*/
+  overflow-y: scroll;
+
+}
+
+select{
+
+  margin-top :1vh;
+  border: 1px solid #CCC;
+  overflow: hidden;
+  background: rgb(225, 255, 92) url("selectIcon.png") no-repeat scroll right center / 16px auto;
+  -moz-appearance: none;
+  padding-right: 9px;
+  background-size: 3vh;
+  background-position: 8.5vw;
+}
+
+
+#day{
+  margin-top: 2vh;
+  margin-right: -5vw;
+}
+#month{
+  margin-right: -4vw;
+}
+#year{
+  margin-right: -5vw;
+}
+
+.addTaskInputs input,.addTaskInputs select{
+  margin-right: -8vw;
+
+}
