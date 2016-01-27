@@ -6,7 +6,7 @@ header("Cache-Control: max-age=1");
 
 function delete($i) {
 
-  if( $connexion = mysqli_connect('localhost', 'root', '14malien14malien', 'samirello') ){
+  if( $connexion = mysqli_connect('localhost', 'root', '', 'samirello') ){
       $requete = "DELETE FROM users WHERE `id`=$i ";
 
       $resultat  = mysqli_query($connexion, $requete);
@@ -26,7 +26,7 @@ if (isset($_GET['delete'])) {
 
  function deleteList($list) {
 
-   if( $connexion = mysqli_connect('localhost', 'root', '14malien14malien', 'samirello') ){
+   if( $connexion = mysqli_connect('localhost', 'root', '', 'samirello') ){
        $requete = "DELETE FROM lists WHERE `listname`='$list'; ";
       //  $requete = "DELETE FROM users WHERE `listname`='$list' ";
        $requete .= "DELETE FROM users WHERE `listname`='$list' ";
@@ -51,7 +51,7 @@ if (isset($_GET['delete'])) {
 $insertionListVerif;
 
 function insertList($list) {
-if( $connexion = mysqli_connect('localhost', 'root', '14malien14malien', 'samirello') ){
+if( $connexion = mysqli_connect('localhost', 'root', '', 'samirello') ){
     $requete = "INSERT INTO lists(`id`,`listname`) VALUES (NULL, '$list')";
 
     $resultat  = mysqli_query($connexion, $requete);
@@ -71,7 +71,7 @@ if (isset($_GET['addedList'])) {
 $insertionVerif;
 
 function insert($list,$name,$date, $task) {
-if( $connexion = mysqli_connect('localhost', 'root', '14malien14malien', 'samirello') ){
+if( $connexion = mysqli_connect('localhost', 'root', '', 'samirello') ){
     $requete = "INSERT INTO users(`id`,`listname`,`name`,`date`, `task`) VALUES (NULL,'$list', '$name','$date', '$task')";
 
     $resultat  = mysqli_query($connexion, $requete);
@@ -94,7 +94,7 @@ if (isset($_GET['list']) && isset($_GET['name']) && isset($_GET['date']) && isse
 function loadAfterSelectChange($listName) {
 
 
-  if ($connexion = mysqli_connect('localhost', 'root', '14malien14malien', 'samirello') ) {
+  if ($connexion = mysqli_connect('localhost', 'root', '', 'samirello') ) {
     $requetelists = "SELECT * FROM lists";
     $lists =  mysqli_query($connexion, $requetelists);
     $listname = [];
@@ -125,7 +125,7 @@ if (isset($_GET['listname'])) {
 
 
 
-   if ($connexion = mysqli_connect('localhost', 'root', '14malien14malien', 'samirello') ) {
+   if ($connexion = mysqli_connect('localhost', 'root', '', 'samirello') ) {
      $requetelists = "SELECT * FROM lists";
      $lists =  mysqli_query($connexion, $requetelists);
      $listname = [];
@@ -151,12 +151,12 @@ if (isset($_GET['listname'])) {
  }
 
 function updateAListName($list, $updatelist) {
-  if( $connexion = mysqli_connect('localhost', 'root', '14malien14malien', 'samirello') ){
+  if( $connexion = mysqli_connect('localhost', 'root', '', 'samirello') ){
       $requete = "UPDATE lists SET `listname`='$updatelist' WHERE `listname`='$list'";
 
       $resultat  = mysqli_query($connexion, $requete);
   }
-  if( $connexion = mysqli_connect('localhost', 'root', '14malien14malien', 'samirello') ){
+  if( $connexion = mysqli_connect('localhost', 'root', '', 'samirello') ){
       $requete = "UPDATE users SET `listname`='$updatelist' WHERE `listname`='$list'";
 
       $resultat  = mysqli_query($connexion, $requete);
@@ -172,7 +172,7 @@ function updateAListName($list, $updatelist) {
   }
 
 function updateTask($Id, $taskOption, $option ) {
-  if( $connexion = mysqli_connect('localhost', 'root', '14malien14malien', 'samirello') ){
+  if( $connexion = mysqli_connect('localhost', 'root', '', 'samirello') ){
     $requete = "UPDATE users SET `$option`='$taskOption' WHERE `id`='$Id'";
 
     $resultat  = mysqli_query($connexion, $requete);
